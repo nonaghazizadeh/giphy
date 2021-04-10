@@ -7,7 +7,6 @@
           <router-link to="/sports">Sports</router-link>
           <router-link to="/artists">Artists</router-link>
           <router-link to="/pinned">Pinned</router-link>
-
         </div>
         <div class="pb-3 pt-3"> 
             <b-input-group size="lg" append="search">
