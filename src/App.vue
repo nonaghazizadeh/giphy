@@ -1,10 +1,22 @@
 <template>
+
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <b-container>
+        <div id="nav">
+          <router-link to="/" class="brand">GIPHY</router-link> 
+          <router-link to="/sports">Sports</router-link>
+          <router-link to="/artists">Artists</router-link>
+          <router-link to="/pinned">Pinned</router-link>
+
+        </div>
+        <div class="pb-3 pt-3"> 
+            <b-input-group size="lg" append="search">
+              <b-form-input></b-form-input>
+            </b-input-group>
+        </div>
+        <router-view/>
+    </b-container>
+
   </div>
 </template>
 
@@ -13,20 +25,23 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: white;
+  background-color: black;
 }
 
-#nav {
-  padding: 30px;
-}
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  /* font-weight: bold; */
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: white
+}
+.brand{
+  font-weight: bold;
+  font-size: 30px;
 }
 </style>
