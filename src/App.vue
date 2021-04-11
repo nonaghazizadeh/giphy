@@ -10,7 +10,7 @@
       <div class="pb-3 pt-3">
         <b-input-group class="mt-3">
           <template #append>
-            <b-input-group-text 
+            <b-input-group-text @click="search()"
               ><router-link to="/search" class="search"
                 ><font-awesome-icon :icon="['fas', 'search']" /></router-link
             ></b-input-group-text>
@@ -18,7 +18,7 @@
           <b-form-input v-model="searchInput" placeholder="search all the GIFs"></b-form-input>
         </b-input-group>
       </div>
-      <router-view :input="searchInput"></router-view>
+      <router-view :input="inputAfterClick"></router-view>
     </b-container>
   </div>
 </template>
@@ -29,9 +29,14 @@ export default {
   data() {
     return {
       searchInput: "",
+      inputAfterClick: ""
     };
   },
-
+  methods:{
+    search(){
+      this.inputAfterClick = this.searchInput
+    }
+  }
 };
 </script>
 
@@ -43,13 +48,11 @@ export default {
   color: white;
   background-color: black;
 }
-
 #nav a {
   color: white;
   text-decoration: none;
   margin-right: 10px;
 }
-
 #nav a.router-link-exact-active {
   color: white;
 }
@@ -73,5 +76,4 @@ a:hover {
   color: white;
   text-decoration: none;
 }
-
 </style>

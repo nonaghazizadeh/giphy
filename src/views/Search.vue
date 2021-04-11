@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <searched :searchInput="input"></searched>
+    <searched :afterClick="input"></searched>
   </div>
 </template>
 

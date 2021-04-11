@@ -45,7 +45,7 @@ Vue.use(VueAxios, axios);
 const STORAGE_KEY = "pinned-storage";
 export default {
   name: "Searched",
-  props: ["searchInput"],
+  props: ["afterClick"],
   data() {
     return {
       searchedList: [],
@@ -55,10 +55,13 @@ export default {
     };
   },
   watch: {
-    searchInput: {
+    afterClick: {
       handler(newValue) {
+        this.searchedList = []
         let APIKEY = "SJNLdIKsz1131URk7ADVxs7gKcKTRW6z";
         let searchStr = newValue;
+        console.log(this.afterClick)
+        
         let sourceURL = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=36&q=${searchStr}`;
         Vue.axios.get(sourceURL).then((response) => {
           for (let i = 0; i < response.data.data.length; i++) {
