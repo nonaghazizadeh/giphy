@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Pinned from '../views/Pinned.vue'
 import Sports from '../views/Sports.vue'
 import Artists from '../views/Artists.vue'
+import Search from '../views/Search.vue'
+
 
 
 Vue.use(VueRouter)
@@ -28,6 +30,11 @@ const routes = [
     path: '/artists',
     name: 'Artists',
     component: Artists
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search,
   }
 ]
 

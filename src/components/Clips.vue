@@ -7,7 +7,6 @@
     <b-row>
         <b-col>
         <b-row>
-            
             <img src="https://media2.giphy.com/media/x8aurwY9fGOvTI1gLs/giphy.gif?cid=ecf05e47vsrky75d9936tcftvpz6g8h5o4f73nn3f8pgv7sc&amp;rid=giphy.gif" width="739" height="415.6875">
             <p>
                 info
