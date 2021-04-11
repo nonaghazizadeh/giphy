@@ -6,7 +6,7 @@
           <b-img
             class="mb-4"
             fluid
-            v-for="(search, index) in pinnedStorageList.slice(0, 12)"
+            v-for="(search, index) in firstCol"
             :key="index"
             :src="search"
           ></b-img>
@@ -15,7 +15,7 @@
           <b-img
             class="mb-4"
             fluid
-            v-for="(search, index) in pinnedStorageList.slice(12, 24)"
+            v-for="(search, index) in secondCol"
             :key="index"
             :src="search"
           ></b-img>
@@ -24,7 +24,7 @@
           <b-img
             class="mb-4"
             fluid
-            v-for="(search, index) in pinnedStorageList.slice(24, 36)"
+            v-for="(search, index) in thirdCol"
             :key="index"
             :src="search"
           ></b-img>
@@ -41,9 +41,25 @@ export default {
   data() {
     return {
       pinnedStorageList: [],
+      firstCol: [],
+      secondCol: [],
+      thirdCol: [],
       storage: "",
       storageList: [],
     };
+  },
+  mounted(){
+    for (let index = 0; index < this.pinnedStorageList.length; index++) {
+      if(index % 3 === 0){
+        this.firstCol.push(this.pinnedStorageList[index])
+      }
+      else if(index % 3 === 1){
+        this.secondCol.push(this.pinnedStorageList[index])
+      }
+      else if(index % 3 === 2){
+          this.thirdCol.push(this.pinnedStorageList[index])
+      }  
+    }
   },
   created() {
     this.storage = localStorage.getItem(STORAGE_KEY);
@@ -57,3 +73,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.col{
+  text-align: center;
+}
+</style>
