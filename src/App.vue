@@ -12,9 +12,8 @@
           <template #append>
             <b-input-group-text
               ><router-link to="/search" class="search"
-                >search</router-link
-              ></b-input-group-text
-            >
+                ><font-awesome-icon :icon="['fas', 'search']" /></router-link
+            ></b-input-group-text>
           </template>
           <b-form-input v-model="searchInput"></b-form-input>
         </b-input-group>
@@ -51,7 +50,11 @@
   color: white;
 }
 .input-group-text {
-  background-color: hotpink;
+  background: linear-gradient(
+    45deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 100%
+  );
   border: 0px;
 }
 a:hover {
