@@ -1,6 +1,10 @@
 <template>
   <div class="mb-5">
-        <h4 class="pt-3"><font-awesome-icon :icon="['fas', 'play']" /><span>Clips</span></h4>
+    <h4 class="pt-3">
+      <font-awesome-icon :icon="['fas', 'play']" /><span class="title"
+        >Clips</span
+      >
+    </h4>
     <b-container>
       <b-row>
         <b-col>
@@ -68,10 +72,10 @@ h4 {
 .first-line {
   font-weight: bold;
 }
-svg{
+svg {
   color: rgb(129, 236, 129);
 }
-span{
+.title {
   margin-left: 15px;
 }
 </style>

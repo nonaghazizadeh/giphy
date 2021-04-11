@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h4 class="pt-3"><font-awesome-icon :icon="['fas', 'bolt']" /><span>Artists</span></h4>
+    <h4 class="pt-3">
+      <font-awesome-icon :icon="['fas', 'bolt']" /><span>Artists</span>
+    </h4>
     <artist-carousel> </artist-carousel>
   </div>
 </template>
@@ -14,14 +16,14 @@ export default {
 </script>
 
 <style scoped>
-h4{
+h4 {
   text-align: left !important;
   font-weight: bold;
 }
-span{
+span {
   margin-left: 15px;
 }
-svg{
+svg {
   color: rgb(252, 134, 154);
 }
 </style>

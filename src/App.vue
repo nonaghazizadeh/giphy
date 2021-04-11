@@ -10,7 +10,7 @@
       <div class="pb-3 pt-3">
         <b-input-group class="mt-3">
           <template #append>
-            <b-input-group-text
+            <b-input-group-text 
               ><router-link to="/search" class="search"
                 ><font-awesome-icon :icon="['fas', 'search']" /></router-link
             ></b-input-group-text>
@@ -31,6 +31,7 @@ export default {
       searchInput: "",
     };
   },
+
 };
 </script>
 

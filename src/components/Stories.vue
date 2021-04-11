@@ -1,8 +1,6 @@
 <template>
   <div class="pb-5">
-    <h4>
-      <font-awesome-icon :icon="['fas', 'tv']" /><span>Stories</span>
-    </h4>
+    <h4><font-awesome-icon :icon="['fas', 'tv']" /><span>Stories</span></h4>
 
     <stories-component></stories-component>
   </div>
@@ -21,8 +19,10 @@ h4 {
   text-align: left !important;
   font-weight: bold;
 }
-span{
+span {
   margin-left: 15px;
 }
-svg{color: indigo;}
+svg {
+  color: indigo;
+}
 </style>

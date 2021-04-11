@@ -48,17 +48,15 @@ export default {
       storageList: [],
     };
   },
-  mounted(){
+  mounted() {
     for (let index = 0; index < this.pinnedStorageList.length; index++) {
-      if(index % 3 === 0){
-        this.firstCol.push(this.pinnedStorageList[index])
+      if (index % 3 === 0) {
+        this.firstCol.push(this.pinnedStorageList[index]);
+      } else if (index % 3 === 1) {
+        this.secondCol.push(this.pinnedStorageList[index]);
+      } else if (index % 3 === 2) {
+        this.thirdCol.push(this.pinnedStorageList[index]);
       }
-      else if(index % 3 === 1){
-        this.secondCol.push(this.pinnedStorageList[index])
-      }
-      else if(index % 3 === 2){
-          this.thirdCol.push(this.pinnedStorageList[index])
-      }  
     }
   },
   created() {
@@ -74,7 +72,7 @@ export default {
 };
 </script>
 <style scoped>
-.col{
+.col {
   text-align: center;
 }
 </style>

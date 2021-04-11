@@ -9,7 +9,6 @@
             v-for="source in sportSources.slice(0, 12)"
             :key="source"
             :src="source"
-
           ></b-img>
         </b-col>
         <b-col>
@@ -60,7 +59,7 @@ export default {
 };
 </script>
 <style scoped>
-.col{
+.col {
   text-align: center;
 }
 </style>
