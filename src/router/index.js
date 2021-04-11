@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Pinned from '../views/Pinned.vue'
+import Pin from '../views/Pin.vue'
 import Sports from '../views/Sports.vue'
 import Artists from '../views/Artists.vue'
 import Search from '../views/Search.vue'
@@ -17,9 +17,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/pinned',
-    name: 'Pinned',
-    component: Pinned
+    path: '/pin',
+    name: 'Pin',
+    component: Pin
   },
   {
     path: '/sports',
