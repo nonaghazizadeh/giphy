@@ -3,8 +3,8 @@
     <b-container>
       <div id="nav">
         <router-link to="/" class="brand">GIPHY</router-link>
-        <router-link to="/sports">Sports</router-link>
-        <router-link to="/artists">Artists</router-link>
+        <router-link to="/sport">Sports</router-link>
+        <router-link to="/food">Foods</router-link>
         <router-link to="/pin">Pinned</router-link>
       </div>
       <div class="pb-3 pt-3">

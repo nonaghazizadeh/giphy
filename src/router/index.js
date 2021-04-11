@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Pin from '../views/Pin.vue'
-import Sports from '../views/Sports.vue'
-import Artists from '../views/Artists.vue'
+import Sport from '../views/Sport.vue'
+import Food from '../views/Food.vue'
 import Search from '../views/Search.vue'
 
 
@@ -22,14 +22,14 @@ const routes = [
     component: Pin
   },
   {
-    path: '/sports',
-    name: 'Sports',
-    component: Sports
+    path: '/sport',
+    name: 'Sport',
+    component: Sport
   },
   {
-    path: '/artists',
-    name: 'Artists',
-    component: Artists
+    path: '/food',
+    name: 'Food',
+    component: Food
   },
   {
     path: '/search',

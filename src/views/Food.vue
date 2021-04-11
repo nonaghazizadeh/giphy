@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <pinned></pinned>
+    <foods></foods>
   </div>
 </template>
 
 <script>
-import Pinned from '../components/Pinned.vue';
+import Foods from '../components/Foods.vue';
 
 export default {
-  name: "Pin",
+  name: "Food",
   components: {
-    Pinned
+    Foods
   },
 };
 </script>
