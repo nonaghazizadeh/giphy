@@ -6,7 +6,7 @@
           <b-img
             class="mb-4"
             fluid
-            v-for="source in searchedList.slice(0, 15)"
+            v-for="source in searchedList.slice(0, 12)"
             :key="source"
             :src="source"
           ></b-img>
@@ -15,7 +15,7 @@
           <b-img
             class="mb-4"
             fluid
-            v-for="source in searchedList.slice(15, 30)"
+            v-for="source in searchedList.slice(12, 24)"
             :key="source"
             :src="source"
           ></b-img>
@@ -24,7 +24,7 @@
           <b-img
             class="mb-4"
             fluid
-            v-for="source in searchedList.slice(30, 45)"
+            v-for="source in searchedList.slice(24, 36)"
             :key="source"
             :src="source"
           ></b-img>
@@ -52,7 +52,7 @@ export default {
       handler(newValue) {
         let APIKEY = "SJNLdIKsz1131URk7ADVxs7gKcKTRW6z";
         let searchStr = newValue;
-        let sourceURL = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=45&q=${searchStr}`;
+        let sourceURL = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=36&q=${searchStr}`;
         Vue.axios.get(sourceURL).then((response) => {
           for (let i = 0; i < response.data.data.length; i++) {
             this.searchedList.push(response.data.data[i].images.original.url);
@@ -65,7 +65,7 @@ export default {
   mounted() {
     let APIKEY = "SJNLdIKsz1131URk7ADVxs7gKcKTRW6z";
     let searchStr = this.searchInput;
-    let sourceURL = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=45&q=${searchStr}`;
+    let sourceURL = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=36&q=${searchStr}`;
     Vue.axios.get(sourceURL).then((response) => {
       for (let i = 0; i < response.data.data.length; i++) {
         this.searchedList.push(response.data.data[i].images.original.url);

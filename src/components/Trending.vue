@@ -1,26 +1,21 @@
 <template>
   <div>
-    <h6>
-      Trending
-    </h6>
-    <trending-carousel>
-    </trending-carousel>
+    <h6>Trending</h6>
+    <trending-carousel> </trending-carousel>
   </div>
-  
 </template>
 
 <script>
-import TrendingCarousel from './TrendingCarousel.vue'
+import TrendingCarousel from "./TrendingCarousel.vue";
 export default {
   components: { TrendingCarousel },
-  name: 'Trending',
-}
+  name: "Trending",
+};
 </script>
 
 <style scoped>
-h6{
+h6 {
   text-align: left !important;
-    font-weight: bold;
+  font-weight: bold;
 }
-
 </style>
