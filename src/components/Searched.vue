@@ -50,8 +50,8 @@ export default {
     return {
       searchedList: [],
       pinnedList: [],
-      storage: '',
-      storageList:[],
+      storage: "",
+      storageList: [],
     };
   },
   watch: {
@@ -70,8 +70,8 @@ export default {
   },
   methods: {
     pin(pinnedURL) {
-      this.pinnedList.push(pinnedURL)
-      localStorage.setItem(STORAGE_KEY,JSON.stringify(this.pinnedList))
+      this.pinnedList.push(pinnedURL);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(this.pinnedList));
     },
   },
   mounted() {
@@ -84,12 +84,12 @@ export default {
       }
     });
     this.storage = localStorage.getItem(STORAGE_KEY);
-    if(this.storage !== null){
-      this.storage = this.storage.slice(1).slice(0,-1);
-    this.storageList = this.storage.split(",");
-    for (let index = 0; index < this.storageList.length; index++) {
-      this.pinnedList.push(this.storageList[index].slice(1).slice(0,-1))
-    }
+    if (this.storage !== null) {
+      this.storage = this.storage.slice(1).slice(0, -1);
+      this.storageList = this.storage.split(",");
+      for (let index = 0; index < this.storageList.length; index++) {
+        this.pinnedList.push(this.storageList[index].slice(1).slice(0, -1));
+      }
     }
   },
 };
