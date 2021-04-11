@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-container>
-      <div id="nav">
+      <div id="nav" class="pt-3">
         <router-link to="/" class="brand">GIPHY</router-link>
         <router-link to="/sport">Sports</router-link>
         <router-link to="/food">Foods</router-link>
@@ -15,13 +15,24 @@
                 ><font-awesome-icon :icon="['fas', 'search']" /></router-link
             ></b-input-group-text>
           </template>
-          <b-form-input v-model="searchInput"></b-form-input>
+          <b-form-input v-model="searchInput" placeholder="search all the GIFs"></b-form-input>
         </b-input-group>
       </div>
       <router-view :input="searchInput"></router-view>
     </b-container>
   </div>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      searchInput: "",
+    };
+  },
+};
+</script>
 
 <style>
 #app {
@@ -61,14 +72,5 @@ a:hover {
   color: white;
   text-decoration: none;
 }
-</style>
-<script>
-export default {
-  data() {
-    return {
-      searchInput: "",
-    };
-  },
-};
-</script>
 
+</style>

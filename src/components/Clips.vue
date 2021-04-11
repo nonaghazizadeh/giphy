@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h6 class="pt-3">Clips</h6>
+  <div class="mb-5">
+        <h4 class="pt-3"><font-awesome-icon :icon="['fas', 'play']" /><span>Clips</span></h4>
     <b-container>
       <b-row>
         <b-col>
@@ -10,7 +10,7 @@
               width="739"
               height="415.6875"
             />
-            <p>info</p>
+            <p class="first-line">We are All In This Together</p>
           </b-row>
         </b-col>
         <b-col>
@@ -25,9 +25,9 @@
                 style="background: rgb(255, 102, 102)"
               />
               <p>
-                info
+                <span class="first-line"> Too Darn Loud</span>
                 <br />
-                secondlineinfo
+                Back To Future
               </p>
             </div>
           </b-row>
@@ -42,9 +42,9 @@
                 style="background: rgb(153, 51, 255)"
               />
               <p>
-                info
+                <span class="first-line"> Boogie Button </span>
                 <br />
-                secondlineinfo
+                Red Bull
               </p>
             </div>
           </b-row>
@@ -61,8 +61,17 @@ export default {
 </script>
 
 <style scoped>
-h6 {
+h4 {
   text-align: left !important;
   font-weight: bold;
+}
+.first-line {
+  font-weight: bold;
+}
+svg{
+  color: rgb(129, 236, 129);
+}
+span{
+  margin-left: 15px;
 }
 </style>

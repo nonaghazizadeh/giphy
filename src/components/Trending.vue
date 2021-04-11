@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h6>Trending</h6>
+    <h4><font-awesome-icon :icon="['fas', 'chart-line']" /><span>Trending</span></h4>
     <trending-carousel> </trending-carousel>
   </div>
 </template>
@@ -14,8 +14,14 @@ export default {
 </script>
 
 <style scoped>
-h6 {
+h4 {
   text-align: left !important;
   font-weight: bold;
+}
+span{
+  margin-left: 15px;
+}
+svg{
+    color: rgb(86, 86, 250);
 }
 </style>

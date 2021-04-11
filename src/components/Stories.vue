@@ -1,6 +1,9 @@
 <template>
   <div class="pb-5">
-    <h6>Stories</h6>
+    <h4>
+      <font-awesome-icon :icon="['fas', 'tv']" /><span>Stories</span>
+    </h4>
+
     <stories-component></stories-component>
   </div>
 </template>
@@ -14,8 +17,12 @@ export default {
 </script>
 
 <style scoped>
-h6 {
+h4 {
   text-align: left !important;
   font-weight: bold;
 }
+span{
+  margin-left: 15px;
+}
+svg{color: indigo;}
 </style>
